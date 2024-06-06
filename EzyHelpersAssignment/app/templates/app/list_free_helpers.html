@@ -1,0 +1,28 @@
+{% extends 'app/base.html' %}
+
+{% load bootstrap_filters %}
+
+
+{% block content %}
+<h2 class="my-4">Free Helpers List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Skill</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for helper in helpers %}
+        <tr>
+            <td>{{ helper.name }}</td>
+            <td>{{ helper.gender }}</td>
+            <td>{{ helper.skill }}</td>
+            <td>{{ helper.age }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
